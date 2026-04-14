@@ -45,7 +45,7 @@
      ════════════════════════════════════════════════════════════════════════════ -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="hero-bg.png" alt="Blueprint Background" />
+    <img src="./Assets/HeroBg.JPG" alt="Blueprint Background" />
     <div class="hero-bg-overlay"></div>
   </div>
   <div class="container hero-content">
@@ -66,6 +66,7 @@
     </div>
 
     <div class="hero-ctas animate-on-scroll" style="animation-delay:0.6s">
+      <span>
       <button class="btn-primary" onclick="scrollToSection('projects')">
         VIEW_SYSTEMS
         <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -78,6 +79,13 @@
         <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LINKEDIN
       </a>
+      <a href="Assets/Resume/Resume.pdf" target="_blank" rel="noreferrer" class="btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11"/>
+</svg>
+        RESUME
+      </a>
+      </span>
     </div>
   </div>
   <div class="hero-scroll">
@@ -97,13 +105,13 @@
         <span class="about-tag about-tag-top">&lt;ABOUT_MODULE&gt;</span>
 
         <!-- ── CHANGE YOUR SECTION HEADLINE HERE ── -->
-        <h2 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;">The Engineer Mindset</h2>
+        <h2 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;">Caffeine, Code, and Controlled Chaos</h2>
 
         <!-- ── CHANGE YOUR BIO PARAGRAPHS HERE ── -->
         <div class="about-body">
           <p>I’m a high school senior who runs on caffeine and curiosity. I've always been the kind of person who wants to understand how things work — and then actually (attempt) build them.</p>
           <p>Through the FIRST Robotics Competition (FRC), I got to turn that into something real. I started as a member and eventually became Programming Team Lead, helping grow the team from just 2 people to 10+. I taught Java, mentored 15+ programmers, and worked to make sure our code was clean, reliable, and actually worked when it mattered.</p>
-          <p class="about-quote">"Runs on caffeine and confidence—the kind of person who says ‘one quick fix’ at 2 AM before a competition and somehow ends up rebuilding half the robot anyway."</p>
+          <p class="about-quote">"Running on caffeine and confidence, the kind of person who says ‘one quick fix’ at 2 AM before a competition and somehow ends up rebuilding half the robot anyway."</p>
         </div>
 
         <!-- Skill chips -->
@@ -361,10 +369,10 @@
           </div>
           <h3 class="exp-title">Technology Department Internship</h3>
           <p class="exp-org">Walt Whitman High School Tech Lab</p>
-          <p class="exp-desc">Managed and ran the school's 3D printing operations, maintained equipment, provided technical support to students, and wrote documentation for various technical processes and devices.</p>
+          <p class="exp-desc">Assisted in managing and running the school's 3D printing operations, maintained equipment, provided technical support to students, and wrote documentation for various technical processes and devices.</p>
           <div class="exp-highlights" id="exp-highlights-2">
             <ul>
-              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Supported daily IT operations by troubleshooting hardware and software issues for staff and student devices</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Supported daily operations by troubleshooting hardware and software issues for staff and student devices</span></li>
               <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Assisted with setup, maintenance, and deployment of school technology including 3D printers and classroom computer networks</span></li>
             </ul>
           </div>
@@ -380,6 +388,8 @@
       </div>
 
       <!-- Experience 3 -->
+       <!-- ── EXAMPLE EXPERIENCE CARD ──
+           Copy and paste this block to add more experience cards. Remember to change the ID numbers for the highlights and toggle button, and update the content! 
       <div class="exp-card animate-on-scroll delay-3">
         <div class="exp-inner">
           <div class="exp-meta">
@@ -407,7 +417,7 @@
           </div>
         </div>
       </div>
-
+    -->
     </div>
   </div>
 </section>
@@ -441,6 +451,7 @@
       <button class="filter-btn" data-filter="mechanical" onclick="filterProjects('mechanical')"><span class="filter-dot mechanical"></span>MECHANICAL</button>
       <button class="filter-btn" data-filter="mixed" onclick="filterProjects('mixed')"><span class="filter-dot mixed"></span>MIXED</button>
       <span class="filter-count" id="filter-count">8 projects</span>
+ 
     </div>
 
     <!-- Featured projects (2-col) -->
@@ -449,7 +460,7 @@
       <!-- Project 0: FRC Competition Robot (featured, mixed) -->
       <div class="project-card" data-kind="mixed" data-featured="true">
         <div class="project-card-img">
-          <img src="robot-project.png" alt="FRC Competition Robot" />
+          <img src="Assets/Projects/odysseus.JPG" alt="FRC Competition Robot" />
           <div class="project-card-img-overlay"></div>
           <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
           <div class="project-kind-badge mixed"><span class="filter-dot mixed"></span>MIXED</div>
@@ -458,44 +469,43 @@
           <div class="project-title-row">
             <h3 class="project-title">FRC Competition Robot</h3>
             <div class="project-stats">
-              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>50</span>
               <span class="project-stat lang-java"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Java</span>
             </div>
           </div>
-          <p class="project-desc">Complete FIRST Robotics Competition robot with integrated subsystems for autonomous operation and game-piece manipulation.</p>
+          <p class="project-desc">"Oddyseus" - A FRC competition robot designed and built for the 2026 Rebuilt game from concept to competition-ready.</p>
           <div class="project-long-desc" id="proj-long-0">
-            <p>Designed and built a full competition robot from concept to competition-ready. Integrated multiple subsystems including drivetrain, intake, elevator, and vision systems. Coordinated a team of engineers through the design process, manufacturing, and testing phases.</p>
+            <p>Over a five week build season, our team designed, built, and programmed a full competition robot for the FIRST Robotics Competition (FRC). As Programming Team Lead, I integrated drivetrain, intake, shooter, and vision systems into one cohesive robot. We developed autonomous routines, and worked closely with mechanical and electrical teams to ensure everything functioned reliably. I also mentored newer programmers and helped grow the team from 2 to 10+ members.</p>
           </div>
           <div class="project-tags">
-            <span class="project-tag">#Mechanical Design</span><span class="project-tag">#Java</span><span class="project-tag">#Control Theory</span><span class="project-tag">#FRC</span><span class="project-tag">#Systems Integration</span>
+            <span class="project-tag">#Mechanical</span><span class="project-tag">#Java</span><span class="project-tag">#WPIlib</span><span class="project-tag">#FRC</span><span class="project-tag">#Software</span><span class="project-tag">#Vision</span>
           </div>
           <div class="project-footer">
             <button class="project-toggle" id="proj-toggle-0" onclick="toggleProject(0)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
             <div class="project-links">
-              <a href="https://github.com/alphaAlex303/frc-robot" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+              <a href="https://github.com/team1389/2026-Odysseus" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 1: Robot Intake (featured, mechanical) -->
-      <div class="project-card" data-kind="mechanical" data-featured="true">
+      <!-- Project 1: Robot Intake (featured, Electrical) -->
+      <div class="project-card" data-kind="mixed" data-featured="true">
         <div class="project-card-img">
-          <img src="robot-project.png" alt="Robot Intake Mechanism" />
+          <img src="Assets/Projects/NightVison.png" alt="3D Printed Night Vision System" />
           <div class="project-card-img-overlay"></div>
-          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-          <div class="project-kind-badge mechanical"><span class="filter-dot mechanical"></span>MECHANICAL</div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+          <div class="project-kind-badge mixed"><span class="filter-dot mixed"></span>MIXED</div>
         </div>
         <div class="project-card-body">
           <div class="project-title-row">
-            <h3 class="project-title">Robot Intake Mechanism</h3>
+            <h3 class="project-title">3D Printed Night Vision System</h3>
           </div>
-          <p class="project-desc">Game-piece intake system designed in SolidWorks — optimized for speed, reliability, and compact packaging.</p>
+          <p class="project-desc">3D printed Night vision using screens and Runcam Night Eagle 2 cameras. Includes Custom PCB's, 3D printed components, and firmware.</p>
           <div class="project-long-desc" id="proj-long-1">
-            <p>Designed a compliant-roller intake mechanism for collecting game pieces during the FRC season. Iterated through 4 design revisions using SolidWorks, with FEA analysis on critical load-bearing members. Fabricated on a CNC router and assembled in-house. The final design weighed under 3 lbs and achieved a 97% successful pickup rate at competition.</p>
+            <p>I designed (albeit at 2 AM) a 3D-printed night vision system using a Runcam Night Eagle 2 camera and small display screens to create a wearable low-light vision setup. The project combines mechanical design, electronics, and firmware. I created custom 3D-printed mounts and housing, designed PCBs for power and signal routing, and developed firmware to handle stable camera input and display output. The main challenge was integrating everything into a compact, reliable system that could function as a single unit. This required multiple design iterations, testing, and hardware debugging as issues came up.</p>
           </div>
           <div class="project-tags">
-            <span class="project-tag">#SolidWorks</span><span class="project-tag">#FEA</span><span class="project-tag">#CNC</span><span class="project-tag">#FRC</span><span class="project-tag">#Fabrication</span>
+            <span class="project-tag">#OnShape</span><span class="project-tag">#Electrical</span><span class="project-tag">#Mechanical</span><span class="project-tag">#Software</span><span class="project-tag">#3D Printing</span>
           </div>
           <div class="project-footer">
             <button class="project-toggle" id="proj-toggle-1" onclick="toggleProject(1)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
@@ -514,7 +524,7 @@
       <!-- Project 2: Autonomous Vision Targeting -->
       <div class="project-card" data-kind="software">
         <div class="project-card-img">
-          <img src="hero-bg.png" alt="Autonomous Vision Targeting" />
+          <img src="Assets/Projects/LL4.png" alt="Autonomous Vision Targeting" />
           <div class="project-card-img-overlay"></div>
           <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
           <div class="project-kind-badge software"><span class="filter-dot software"></span>SOFTWARE</div>
@@ -524,12 +534,12 @@
             <h3 class="project-title">Autonomous Vision Targeting</h3>
             <div class="project-stats">
               <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>18</span>
-              <span class="project-stat lang-python"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Python</span>
+              <span class="project-stat lang-java"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>java</span>
             </div>
           </div>
-          <p class="project-desc">Computer vision pipeline for AprilTag detection and retroreflective tape targeting at 60fps.</p>
+          <p class="project-desc">Computer vision pipeline for AprilTag detection tracking, targeting, and autonomous navigation.</p>
           <div class="project-long-desc" id="proj-long-2">
-            <p>Built a full computer vision pipeline using OpenCV and PhotonVision to detect AprilTags and retroreflective targets. Calculated pose estimation, distance, and angle to targets for automated turret aiming and autonomous path correction. Integrated with the main robot controller over NetworkTables.</p>
+            <p>During the five week FRC season, my team and I developed a computer vision pipeline for AprilTag detection and targeting. We deloped code in which real-time processing and pose estimation were implemented to enable accurate target detection and shooting using a variable hood, flywheel, and turret to shoot the gamepiece into the target even if the bot was moving.</p>
           </div>
           <div class="project-tags">
             <span class="project-tag">#Python</span><span class="project-tag">#OpenCV</span><span class="project-tag">#AprilTags</span><span class="project-tag">#NetworkTables</span>
@@ -544,6 +554,7 @@
       </div>
 
       <!-- Project 3: Custom Sensor PCB -->
+      <!--
       <div class="project-card" data-kind="mechanical">
         <div class="project-card-img">
           <img src="pcb-project.png" alt="Custom Sensor PCB" />
@@ -574,8 +585,9 @@
           </div>
         </div>
       </div>
-
+      -->
       <!-- Project 4: Elevator Lift Assembly -->
+      <!--
       <div class="project-card" data-kind="mechanical">
         <div class="project-card-img">
           <img src="robot-project.png" alt="Elevator Lift Assembly" />
@@ -602,8 +614,9 @@
           </div>
         </div>
       </div>
-
+      -->
       <!-- Project 5: Motor Controller Diagnostics Dashboard -->
+       <!--
       <div class="project-card" data-kind="software">
         <div class="project-card-img">
           <img src="robot-project.png" alt="Motor Controller Diagnostics Dashboard" />
@@ -634,8 +647,9 @@
           </div>
         </div>
       </div>
-
+      -->
       <!-- Project 6: Pneumatic Clamping System -->
+       <!--
       <div class="project-card" data-kind="mechanical">
         <div class="project-card-img">
           <img src="pcb-project.png" alt="Pneumatic Clamping System" />
@@ -662,8 +676,9 @@
           </div>
         </div>
       </div>
-
+      -->
       <!-- Project 7: Arm Kinematics Simulator -->
+       <!--
       <div class="project-card" data-kind="software">
         <div class="project-card-img">
           <img src="hero-bg.png" alt="Arm Kinematics Simulator" />
@@ -694,6 +709,7 @@
           </div>
         </div>
       </div>
+      -->
 
     </div>
 
@@ -726,6 +742,12 @@
           <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GITHUB
         </a>
+              <a href="Assets/Resume/Resume.pdf" target="_blank" rel="noreferrer" class="contact-btn resume">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11"/>
+</svg>
+        RESUME
+      </a>
       </div>
     </div>
   </div>
