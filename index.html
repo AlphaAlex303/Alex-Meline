@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Meline — Engineer</title>
+  <meta name="description" content="Engineering portfolio — robotics, embedded systems, and mechanical design." />
+  <link rel="icon" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <div class="nav-logo" onclick="scrollToSection('hero')">
+      <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      <span>A.MELINE_</span>
+    </div>
+    <div class="nav-links">
+      <button class="nav-link" onclick="scrollToSection('about')">// ABOUT</button>
+      <button class="nav-link" onclick="scrollToSection('education')">// EDUCATION</button>
+      <button class="nav-link" onclick="scrollToSection('experience')">// EXPERIENCE</button>
+      <button class="nav-link" onclick="scrollToSection('projects')">// PROJECTS</button>
+      <button class="nav-link" onclick="scrollToSection('contact')">// CONTACT</button>
+    </div>
+    <button class="nav-mobile-btn" id="mobile-btn" onclick="toggleMobileMenu()">MENU</button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button onclick="scrollToSection('about')">// ABOUT</button>
+    <button onclick="scrollToSection('education')">// EDUCATION</button>
+    <button onclick="scrollToSection('experience')">// EXPERIENCE</button>
+    <button onclick="scrollToSection('projects')">// PROJECTS</button>
+    <button onclick="scrollToSection('contact')">// CONTACT</button>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="hero-bg.png" alt="Blueprint Background" />
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow animate-on-scroll" style="animation-delay:0.2s">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">System Initialize</span>
+    </div>
+
+    <h1 class="animate-on-scroll" style="animation-delay:0.3s">
+      ALEX MELINE<br/>
+      <span class="hero-gradient">ENGINEER.</span>
+    </h1>
+
+    <!-- ── CHANGE YOUR SUBTITLE / TAGLINE HERE ── -->
+    <div class="hero-subtitle animate-on-scroll" style="animation-delay:0.5s">
+      <p>Prospective Student at Clarkson University</p>
+      <p class="sub">Building and putting ideas at 2AM running on pure caffine to working to building and program a robot during the day</p>
+    </div>
+
+    <div class="hero-ctas animate-on-scroll" style="animation-delay:0.6s">
+      <button class="btn-primary" onclick="scrollToSection('projects')">
+        VIEW_SYSTEMS
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <a href="https://github.com/alphaAlex303" target="_blank" rel="noreferrer" class="btn-outline">
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GITHUB
+      </a>
+      <a href="https://linkedin.com/in/alexmelineofficial" target="_blank" rel="noreferrer" class="btn-outline">
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LINKEDIN
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg class="icon-hero" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     ABOUT
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left column: bio -->
+      <div class="tech-border animate-on-scroll from-left" style="padding:2rem 3rem;">
+        <span class="about-tag about-tag-top">&lt;ABOUT_MODULE&gt;</span>
+
+        <!-- ── CHANGE YOUR SECTION HEADLINE HERE ── -->
+        <h2 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;">The Engineer Mindset</h2>
+
+        <!-- ── CHANGE YOUR BIO PARAGRAPHS HERE ── -->
+        <div class="about-body">
+          <p>I’m a high school senior who runs on caffeine and curiosity. I've always been the kind of person who wants to understand how things work — and then actually (attempt) build them.</p>
+          <p>Through the FIRST Robotics Competition (FRC), I got to turn that into something real. I started as a member and eventually became Programming Team Lead, helping grow the team from just 2 people to 10+. I taught Java, mentored 15+ programmers, and worked to make sure our code was clean, reliable, and actually worked when it mattered.</p>
+          <p class="about-quote">"Runs on caffeine and confidence—the kind of person who says ‘one quick fix’ at 2 AM before a competition and somehow ends up rebuilding half the robot anyway."</p>
+        </div>
+
+        <!-- Skill chips -->
+        <div class="skill-chips">
+          <div class="skill-chip">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            Robotics
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Electrical
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Mechanical
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            Software
+          </div>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="tech-stack">
+          <p class="tech-stack-label">TECH_STACK</p>
+          <div class="tech-icons">
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.35.12-.33.18-.3.25-.27.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.12.33-.18.3-.25.27-.31.23-.38.2-.44.18-.51.15-.58.12-.64.1-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg><span>Python</span></div>
+            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>Git</span></div>
+            <div class="tech-icon"><svg width="16" height="16" fill="currentColor" class="bi bi-javascript" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/></svg><span>JavaScript</span></div>
+            <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cup-hot" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175"/><path d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.2₀₂ -.388a6 6 ₀₂ .253 -.382l .₀₂₅ -.₀₃₅A .5 .5 ₀₂ .₁₀₄ .8"/></svg><span>Java</span></div>
+            <div class="tech-icon"><svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg><span>HTML</span></div>
+            <div class="tech-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/></svg><span>CSS</span></div>
+          </div>  
+        </div>
+
+        <span class="about-tag about-tag-bottom">&lt;/ABOUT_MODULE&gt;</span>
+      </div>
+
+      <!-- Right column: terminal -->
+      <div class="terminal-wrapper animate-on-scroll from-scale">
+        <div class="terminal-bg">
+          <div class="terminal-grid-overlay"></div>
+          <div class="terminal-window">
+            <div class="terminal-titlebar">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+              <span class="terminal-title">diagnostics.exe</span>
+            </div>
+            <div class="terminal-body">
+              <p class="cmd">&gt; initializing neural pathways...</p>
+              <p class="ok">[OK] Idea initialized</p>
+              <p class="ok">[OK] Neural pathways established</p>
+              <p class="ok">[OK] Caffine levels: Optimal</p>
+              <p style="margin-top:1rem" class="cmd">&gt; running self_test()</p>
+              <p>&gt; STATUS: OPERATIONAL</p>
+              <p>&gt; UPTIME: <span id="uptime-hours">0</span> HOURS</p>
+              <p>&gt; CURRENT_TASK: Graduate High School</p>
+              <div class="terminal-cursor"></div>
+            </div>
+          </div>
+        </div>
+        <div class="terminal-corner-tr"></div>
+        <div class="terminal-corner-bl"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     EDUCATION
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="education" id="education">
+  <div class="container">
+    <div class="section-label">
+      <div class="section-label-line" style="background:var(--secondary)"></div>
+      <span class="section-label-text" style="color:var(--secondary)">Education</span>
+    </div>
+
+    <div class="edu-grid">
+      <!-- University card -->
+      <div class="edu-card animate-on-scroll">
+        <div class="edu-header">
+          <div>
+            <!-- ── CHANGE UNIVERSITY DATES HERE ── -->
+            <div class="edu-dates">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              2026 — EXPECTED 2030
+            </div>
+            <!-- ── CHANGE DEGREE NAME HERE ── -->
+            <h3 class="edu-degree">Engineering Freshman</h3>
+            <!-- ── CHANGE UNIVERSITY NAME HERE ── -->
+            <p class="edu-school">Clarkson University</p>
+            <!-- ── CHANGE UNIVERSITY LOCATION HERE ── -->
+            <p class="edu-location">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Potsdam, NY
+            </p>
+          </div>
+          <!-- <div class="edu-badge">DEAN'S LIST</div> -->
+        </div>
+
+        <div class="edu-section">
+          <p class="edu-section-label">RELEVANT COURSEWORK</p>
+          <div class="course-chips">
+            <!--
+            <span class="course-chip">Control Systems</span>
+            <span class="course-chip">Mechatronics</span>
+            <span class="course-chip">Embedded Programming</span>
+            <span class="course-chip">Engineering Dynamics</span>
+            <span class="course-chip">Statics &amp; Strength of Materials</span>
+            <span class="course-chip">Calculus III</span>
+            <span class="course-chip">Linear Algebra</span>
+            <span class="course-chip">Circuits &amp; Electronics</span>
+          -->
+            <span class="course-chip">N/A</span>
+          </div>
+        </div>
+
+        <div class="edu-section">
+          <p class="edu-section-label">CAMPUS INVOLVEMENT</p>
+          <!--
+          <div class="activity-row"><span class="activity-name">FRC Robotics Team</span><span class="activity-role">Team Lead &amp; Captain</span></div>
+          <div class="activity-row"><span class="activity-name">Society of Automotive Engineers (SAE)</span><span class="activity-role">Member</span></div>
+          <div class="activity-row"><span class="activity-name">IEEE Student Chapter</span><span class="activity-role">Member</span></div>
+          <div class="activity-row"><span class="activity-name">Robotics Lab</span><span class="activity-role">Teaching Assistant</span></div>
+          -->
+          <div class="activity-row"><span class="activity-name">N/A</span><span class="activity-role"></span>
+        </div>
+        </div>
+      </div>
+
+      <!-- High school card -->
+      <div class="edu-card animate-on-scroll delay-1">
+        <!-- ── CHANGE HIGH SCHOOL DATES HERE ── -->
+        <div class="edu-dates">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          2023 — 2026
+        </div>
+        <h3 class="edu-degree">High School Diploma</h3>
+        <!-- ── CHANGE HIGH SCHOOL NAME HERE ── -->
+        <p class="edu-school">Walt Whitman High School</p>
+        <!-- ── CHANGE HIGH SCHOOL LOCATION HERE ── -->
+        <p class="edu-location">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bethesda, MD
+        </p>
+
+        <div class="edu-section">
+          <p class="edu-section-label">HIGHLIGHTS</p>
+          <div style="margin-bottom:1.25rem">
+            <div class="hs-highlight"><span class="arrow">›</span><span>Project Lead the Way | Programming and Engineering Tracks</span></div>
+            <div class="hs-highlight"><span class="arrow">›</span><span>EDD, AP Comp Sci Java, Hon Physics, Aerospace Engineering, Digital Electronics, AP Comp Sci Principles</span></div>
+            <div class="hs-highlight"><span class="arrow">›</span><span>Internship with Engineering Department</span></div>
+          </div>
+        </div>
+
+        <div class="edu-section">
+          <p class="edu-section-label">INVOLVEMENT</p>
+          <div class="activity-row"><span class="activity-name">FRC Robotics Team</span><span class="activity-role">Programming Lead</span></div>
+          <div class="activity-row"><span class="activity-name">FTC Robotics Team</span><span class="activity-role">Programming Mentor</span></div>
+          <div class="activity-row"><span class="activity-name">Engineering Internship</span><span class="activity-role">Maker Space Lead Intern</span></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     EXPERIENCE
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-label">
+      <div class="section-label-line" style="background:var(--secondary)"></div>
+      <span class="section-label-text" style="color:var(--secondary)">Operational History</span>
+    </div>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:1rem;">Experience</h2>
+    <p class="font-mono" style="color:var(--muted-fg);max-width:40rem;margin-bottom:4rem;">From leading robots all day to projects at 2AM it all matters.</p>
+
+    <div class="exp-grid">
+
+      <!-- Experience 0 -->
+      <div class="exp-card animate-on-scroll">
+        <div class="exp-inner">
+          <div class="exp-meta">
+            <span class="exp-type-badge leadership">LEADERSHIP</span>
+            <span class="exp-type-badge technical">TECHNICAL</span>
+            <span class="exp-time"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2022 — 2026</span>
+            <span class="exp-location"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bethesda, MD</span>
+          </div>
+          <h3 class="exp-title">FRC Team Lead &amp; Member</h3>
+          <p class="exp-org">FIRST Robotics Competition</p>
+          <p class="exp-desc">Lead a 10+ student team through the annual 6-week build season, planning, programming, and testing of a 120lb robot for competition.</p>
+          <div class="exp-highlights" id="exp-highlights-0">
+            <ul>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Built 10+ member team from 2 members and on boarded new programming mentors</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Planned Lessons on JAVA, Established standards for code quality and documentation</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Mentored and Lead 15+ student programmers on Java</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Reached FRC District Championship Twice</span></li>
+            </ul>
+          </div>
+          <div class="exp-footer">
+            <div class="exp-tags">
+              <span class="exp-tag">Java</span><span class="exp-tag">WPILib</span><span class="exp-tag">Leadership</span><span class="exp-tag">Project Management</span><span class="exp-tag">Team Management</span>
+            </div>
+            <button class="exp-toggle" id="exp-toggle-0" onclick="toggleExperience(0)">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> DETAILS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 1 -->
+      <div class="exp-card animate-on-scroll delay-1">
+        <div class="exp-inner">
+          <div class="exp-meta">
+            <span class="exp-type-badge leadership">LEADERSHIP</span>
+            <span class="exp-type-badge academic">STEM Education / Teaching</span>
+            <span class="exp-time"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023 — 2024 | <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2024 - 2025</span>
+            <span class="exp-location"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bethesda, MD</span>
+          </div>
+          <h3 class="exp-title">YMCA STEM Camp Counselor</h3>
+          <p class="exp-org">YMCA Metropolitan Washington</p>
+          <p class="exp-desc">Worked as a STEM Camp Counselor, leading activities for younger children and supporting hands-on STEM learning in a structured camp environment.</p>
+          <div class="exp-highlights" id="exp-highlights-1">
+            <ul>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Led and supervised groups of students through hands-on STEM activities in a structured camp environment</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Supported learning by guiding problem-solving, teamwork, and engagement in interactive projects</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Helped create a positive and organized environment where students could explore STEM concepts safely and effectively</span></li>
+            </ul>
+          </div>
+          <div class="exp-footer">
+            <div class="exp-tags">
+              <span class="exp-tag">Leadership</span><span class="exp-tag">STEM Instruction</span><span class="exp-tag">Mentorship</span><span class="exp-tag">Activity Coordination</span>
+            </div>
+            <button class="exp-toggle" id="exp-toggle-1" onclick="toggleExperience(1)">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> DETAILS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="exp-card animate-on-scroll delay-2">
+        <div class="exp-inner">
+          <div class="exp-meta">
+            <span class="exp-type-badge leadership">LEADERSHIP</span>
+            <span class="exp-type-badge technical">TECHNICAL</span>
+            <span class="exp-type-badge academic">ACADEMIC</span>
+            <span class="exp-time"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2025 — 2026</span>
+            <span class="exp-location"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bethesda, MD</span>
+          </div>
+          <h3 class="exp-title">Technology Department Internship</h3>
+          <p class="exp-org">Walt Whitman High School Tech Lab</p>
+          <p class="exp-desc">Managed and ran the school's 3D printing operations, maintained equipment, provided technical support to students, and wrote documentation for various technical processes and devices.</p>
+          <div class="exp-highlights" id="exp-highlights-2">
+            <ul>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Supported daily IT operations by troubleshooting hardware and software issues for staff and student devices</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Assisted with setup, maintenance, and deployment of school technology including 3D printers and classroom computer networks</span></li>
+            </ul>
+          </div>
+          <div class="exp-footer">
+            <div class="exp-tags">
+              <span class="exp-tag">Software Support</span><span class="exp-tag">Device Setup & Deployment</span><span class="exp-tag">System Maintenance</span><span class="exp-tag">Hardware Debugging</span>
+            </div>
+            <button class="exp-toggle" id="exp-toggle-2" onclick="toggleExperience(2)">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> DETAILS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="exp-card animate-on-scroll delay-3">
+        <div class="exp-inner">
+          <div class="exp-meta">
+            <span class="exp-type-badge technical">TECHNICAL</span>
+            <span class="exp-time"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Summer 2023</span>
+            <span class="exp-location"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Remote / On-site</span>
+          </div>
+          <h3 class="exp-title">Mechanical Design Intern</h3>
+          <p class="exp-org">Engineering Co-op Program</p>
+          <p class="exp-desc">Supported mechanical design workflows using SolidWorks and Fusion 360 for industrial automation components. Contributed to tolerance analysis and manufacturing documentation.</p>
+          <div class="exp-highlights" id="exp-highlights-3">
+            <ul>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Designed 3 production-ready bracket assemblies using GD&amp;T best practices</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Created full BOM and assembly drawings for machine shop fabrication</span></li>
+              <li><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg><span>Collaborated with senior engineers on DFM (Design for Manufacturability) reviews</span></li>
+            </ul>
+          </div>
+          <div class="exp-footer">
+            <div class="exp-tags">
+              <span class="exp-tag">SolidWorks</span><span class="exp-tag">Fusion 360</span><span class="exp-tag">GD&amp;T</span><span class="exp-tag">Technical Drawing</span>
+            </div>
+            <button class="exp-toggle" id="exp-toggle-3" onclick="toggleExperience(3)">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> DETAILS
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     PROJECTS
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="projects" id="projects">
+  <div class="container" style="position:relative;z-index:10;">
+    <div class="projects-header">
+      <div class="section-label">
+        <div class="section-label-line" style="background:var(--primary)"></div>
+        <span class="section-label-text" style="color:var(--primary)">Selected Work</span>
+      </div>
+      <div class="projects-title-row">
+        <div>
+          <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:0.5rem;">Projects</h2>
+          <p class="font-mono" style="color:var(--muted-fg);max-width:32rem;">Software, hardware, and mechanical — engineering is all of it.</p>
+        </div>
+        <a href="https://github.com/alphaAlex303" target="_blank" rel="noreferrer" class="btn-outline" style="flex-shrink:0;padding:0.5rem 1rem;">
+          <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GITHUB
+        </a>
+      </div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">ALL</button>
+      <button class="filter-btn" data-filter="software" onclick="filterProjects('software')"><span class="filter-dot software"></span>SOFTWARE</button>
+      <button class="filter-btn" data-filter="mechanical" onclick="filterProjects('mechanical')"><span class="filter-dot mechanical"></span>MECHANICAL</button>
+      <button class="filter-btn" data-filter="mixed" onclick="filterProjects('mixed')"><span class="filter-dot mixed"></span>MIXED</button>
+      <span class="filter-count" id="filter-count">8 projects</span>
+    </div>
+
+    <!-- Featured projects (2-col) -->
+    <div class="project-grid featured">
+
+      <!-- Project 0: FRC Competition Robot (featured, mixed) -->
+      <div class="project-card" data-kind="mixed" data-featured="true">
+        <div class="project-card-img">
+          <img src="robot-project.png" alt="FRC Competition Robot" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="project-kind-badge mixed"><span class="filter-dot mixed"></span>MIXED</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">FRC Competition Robot</h3>
+            <div class="project-stats">
+              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>50</span>
+              <span class="project-stat lang-java"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Java</span>
+            </div>
+          </div>
+          <p class="project-desc">Complete FIRST Robotics Competition robot with integrated subsystems for autonomous operation and game-piece manipulation.</p>
+          <div class="project-long-desc" id="proj-long-0">
+            <p>Designed and built a full competition robot from concept to competition-ready. Integrated multiple subsystems including drivetrain, intake, elevator, and vision systems. Coordinated a team of engineers through the design process, manufacturing, and testing phases.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#Mechanical Design</span><span class="project-tag">#Java</span><span class="project-tag">#Control Theory</span><span class="project-tag">#FRC</span><span class="project-tag">#Systems Integration</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-0" onclick="toggleProject(0)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <a href="https://github.com/alphaAlex303/frc-robot" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 1: Robot Intake (featured, mechanical) -->
+      <div class="project-card" data-kind="mechanical" data-featured="true">
+        <div class="project-card-img">
+          <img src="robot-project.png" alt="Robot Intake Mechanism" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="project-kind-badge mechanical"><span class="filter-dot mechanical"></span>MECHANICAL</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Robot Intake Mechanism</h3>
+          </div>
+          <p class="project-desc">Game-piece intake system designed in SolidWorks — optimized for speed, reliability, and compact packaging.</p>
+          <div class="project-long-desc" id="proj-long-1">
+            <p>Designed a compliant-roller intake mechanism for collecting game pieces during the FRC season. Iterated through 4 design revisions using SolidWorks, with FEA analysis on critical load-bearing members. Fabricated on a CNC router and assembled in-house. The final design weighed under 3 lbs and achieved a 97% successful pickup rate at competition.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#SolidWorks</span><span class="project-tag">#FEA</span><span class="project-tag">#CNC</span><span class="project-tag">#FRC</span><span class="project-tag">#Fabrication</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-1" onclick="toggleProject(1)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <span class="project-link physical"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> PHYSICAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Regular projects (3-col) -->
+    <div class="project-grid regular">
+
+      <!-- Project 2: Autonomous Vision Targeting -->
+      <div class="project-card" data-kind="software">
+        <div class="project-card-img">
+          <img src="hero-bg.png" alt="Autonomous Vision Targeting" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="project-kind-badge software"><span class="filter-dot software"></span>SOFTWARE</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Autonomous Vision Targeting</h3>
+            <div class="project-stats">
+              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>18</span>
+              <span class="project-stat lang-python"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Python</span>
+            </div>
+          </div>
+          <p class="project-desc">Computer vision pipeline for AprilTag detection and retroreflective tape targeting at 60fps.</p>
+          <div class="project-long-desc" id="proj-long-2">
+            <p>Built a full computer vision pipeline using OpenCV and PhotonVision to detect AprilTags and retroreflective targets. Calculated pose estimation, distance, and angle to targets for automated turret aiming and autonomous path correction. Integrated with the main robot controller over NetworkTables.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#Python</span><span class="project-tag">#OpenCV</span><span class="project-tag">#AprilTags</span><span class="project-tag">#NetworkTables</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-2" onclick="toggleProject(2)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <a href="https://github.com/alexchen/vision-targeting" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Custom Sensor PCB -->
+      <div class="project-card" data-kind="mechanical">
+        <div class="project-card-img">
+          <img src="pcb-project.png" alt="Custom Sensor PCB" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+          <div class="project-kind-badge mechanical"><span class="filter-dot mechanical"></span>MECHANICAL</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Custom Sensor PCB</h3>
+            <div class="project-stats">
+              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>11</span>
+              <span class="project-stat lang-c"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>C</span>
+            </div>
+          </div>
+          <p class="project-desc">Multi-sensor interface PCB integrating LiDAR and ultrasonic sensors with the robot controller.</p>
+          <div class="project-long-desc" id="proj-long-3">
+            <p>Engineered a custom PCB from scratch using KiCad to interface multiple LiDAR and ultrasonic sensors with a RoboRIO controller. Handled signal conditioning, voltage regulation, and CAN bus termination. Assembled and soldered SMD components, then validated against requirements in hardware testing.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#KiCad</span><span class="project-tag">#Embedded C</span><span class="project-tag">#PCB Design</span><span class="project-tag">#Soldering</span><span class="project-tag">#SMD</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-3" onclick="toggleProject(3)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <a href="https://github.com/alexchen/sensor-pcb" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Elevator Lift Assembly -->
+      <div class="project-card" data-kind="mechanical">
+        <div class="project-card-img">
+          <img src="robot-project.png" alt="Elevator Lift Assembly" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="project-kind-badge mechanical"><span class="filter-dot mechanical"></span>MECHANICAL</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Elevator Lift Assembly</h3>
+          </div>
+          <p class="project-desc">Cascading two-stage elevator lift for vertical game-piece manipulation, rated for 40 lbs at full extension.</p>
+          <div class="project-long-desc" id="proj-long-4">
+            <p>Designed a cascading 2-stage elevator lift system capable of carrying 40 lbs to a height of 72 inches. Used a continuous rigging system with Dyneema cord and custom-machined pulleys. Performed hand calculations and SolidWorks Simulation to validate tube wall thickness and bearing load. Manufactured in-house on a Haas mini-mill and hand assembled by the team.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#SolidWorks</span><span class="project-tag">#Mechanical Design</span><span class="project-tag">#Manufacturing</span><span class="project-tag">#FRC</span><span class="project-tag">#FEA</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-4" onclick="toggleProject(4)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <span class="project-link physical"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> PHYSICAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Motor Controller Diagnostics Dashboard -->
+      <div class="project-card" data-kind="software">
+        <div class="project-card-img">
+          <img src="robot-project.png" alt="Motor Controller Diagnostics Dashboard" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+          <div class="project-kind-badge software"><span class="filter-dot software"></span>SOFTWARE</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Motor Controller Diagnostics Dashboard</h3>
+            <div class="project-stats">
+              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>22</span>
+              <span class="project-stat lang-python"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Python</span>
+            </div>
+          </div>
+          <p class="project-desc">Real-time telemetry dashboard for motor controller health monitoring used in the Clarkson robotics lab.</p>
+          <div class="project-long-desc" id="proj-long-5">
+            <p>Built for use in the Clarkson University robotics lab to help students debug SPARK MAX and Talon SRX motor controllers. Reads CAN bus telemetry (current, velocity, temperature) and displays it in a real-time web dashboard. Cut motor-related debugging time significantly — now used by 80+ students.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#Python</span><span class="project-tag">#CAN Bus</span><span class="project-tag">#FastAPI</span><span class="project-tag">#React</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-5" onclick="toggleProject(5)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <a href="https://github.com/alexchen/motor-diagnostics" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Pneumatic Clamping System -->
+      <div class="project-card" data-kind="mechanical">
+        <div class="project-card-img">
+          <img src="pcb-project.png" alt="Pneumatic Clamping System" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+          <div class="project-kind-badge mechanical"><span class="filter-dot mechanical"></span>MECHANICAL</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Pneumatic Clamping System</h3>
+          </div>
+          <p class="project-desc">Pneumatic gripper with solenoid valve control for rapid, repeatable game-piece clamping.</p>
+          <div class="project-long-desc" id="proj-long-6">
+            <p>Designed and built a pneumatic clamping system using double-acting cylinders and solenoid valve control for high-speed, repeatable gripping. Sized compressor, pressure regulator, and tubing for the robot's air storage system. Integrated valve control into the robot's main control loop with configurable pressure triggers. Achieved consistent 150ms open-close cycle times under competition conditions.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#Pneumatics</span><span class="project-tag">#Mechanical Design</span><span class="project-tag">#Solenoid Control</span><span class="project-tag">#FRC</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-6" onclick="toggleProject(6)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <span class="project-link physical"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> PHYSICAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7: Arm Kinematics Simulator -->
+      <div class="project-card" data-kind="software">
+        <div class="project-card-img">
+          <img src="hero-bg.png" alt="Arm Kinematics Simulator" />
+          <div class="project-card-img-overlay"></div>
+          <div class="project-icon-badge"><svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="project-kind-badge software"><span class="filter-dot software"></span>SOFTWARE</div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-title-row">
+            <h3 class="project-title">Arm Kinematics Simulator</h3>
+            <div class="project-stats">
+              <span class="project-stat"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>45</span>
+              <span class="project-stat lang-python"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>Python</span>
+            </div>
+          </div>
+          <p class="project-desc">2D/3D robotic arm forward and inverse kinematics simulator with real-time visualization.</p>
+          <div class="project-long-desc" id="proj-long-7">
+            <p>An interactive tool for visualizing forward and inverse kinematics for n-joint robotic arms. Written in Python with a Pygame rendering layer. Supports up to 6 DOF, live joint angle editing, and a basic trajectory planner. Built as a learning tool for student programmers on the FRC team.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">#Python</span><span class="project-tag">#Kinematics</span><span class="project-tag">#Pygame</span><span class="project-tag">#Simulation</span>
+          </div>
+          <div class="project-footer">
+            <button class="project-toggle" id="proj-toggle-7" onclick="toggleProject(7)"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg> MORE</button>
+            <div class="project-links">
+              <a href="https://github.com/alexchen/arm-kinematics" target="_blank" rel="noreferrer" class="project-link"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     CONTACT
+     ════════════════════════════════════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="tech-border contact-inner animate-on-scroll">
+      <div class="contact-badge">
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <span class="contact-badge-text">Open to Opportunities</span>
+      </div>
+      <!-- ── CHANGE THE HEADLINE AND DESCRIPTION BELOW ── -->
+      <h2>Initiate Handshake</h2>
+      <p>Currently open for engineering internships, co-ops, and discussions about robots that go too fast.</p>
+      <div class="contact-btns">
+        <a href="mailto:alexmeine1@gmail.com" class="contact-btn email">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          TRANSMIT_EMAIL
+        </a>
+        <a href="https://linkedin.com/in/alexmelineofficial" target="_blank" rel="noreferrer" class="contact-btn linkedin">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LINKEDIN
+        </a>
+        <a href="https://github.com/alphaAlex303" target="_blank" rel="noreferrer" class="contact-btn github">
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GITHUB
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <!-- ── CHANGE YOUR NAME IN THE COPYRIGHT LINE ── -->
+    <div>&copy; <script>document.write(new Date().getFullYear())</script> ALEX MELINE. ALL SYSTEMS NOMINAL.</div>
+    <div class="footer-links">
+      <!-- ── CHANGE YOUR GITHUB / LINKEDIN HANDLES BELOW ── -->
+      <a href="https://github.com/alphaAlex303" target="_blank" rel="noreferrer" class="footer-link">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GITHUB
+      </a>
+      <a href="https://linkedin.com/in/alexmelineofficial" target="_blank" rel="noreferrer" class="footer-link">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LINKEDIN
+      </a>
+      <span class="footer-link" style="cursor:default;">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        CLARKSON UNIVERSITY
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
